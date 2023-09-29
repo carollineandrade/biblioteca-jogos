@@ -23,6 +23,8 @@ Route::get('/create', [JogosController::class, 'create']);
 
 Route::post('/new', [JogosController::class, 'store']);
 
+Route::get('/dashboard', [JogosController::class, 'index'])->middleware(['auth', 'verified'])->name('jogos');
+
 
 
 
